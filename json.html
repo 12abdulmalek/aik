@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">                           
+    <title>Document</title>
+</head>
+<body>
+    <h1>try to make a json file</h1>
+    <script>
+                 const name = [];
+        const names = name!==undefined?name[0]:'this is nam';
+        console.log(names);
+
+        const std = [
+            {name:"phone",id:2323},
+            {name:"phones",id:2323}
+        ];
+        const filtering = std.filter(p => p.name!=='phone');
+        console.log(filtering);
+        console.log(...std);
+        const student = {
+            name:'abdul malek sarkar',
+            id:34,
+            subject:'science'
+        };
+        const values = Object.values(student);
+         console.log(values);
+        const key = Object.keys(student);
+        const keyJson = JSON.stringify(key);
+        console.log(key);
+        console.log(keyJson);
+        const jsonName = JSON.stringify(student);
+        console.log(jsonName);
+        const normal = JSON.parse(jsonName);
+        console.log(normal);
+        localStorage.setItem('value',JSON.stringify(jsonName));
+    </script>
+</body>
+</html>
